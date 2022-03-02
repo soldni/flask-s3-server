@@ -1,18 +1,18 @@
 import errno
 import functools
+import hashlib
+import ipaddress
 import itertools
 import logging
-from re import L
+import os
 import shutil
+import tempfile
+from typing import Sequence, Union
+
+import click
 from flask import Flask, send_file
 from s3fs import S3FileSystem
-import click
-import ipaddress
-import hashlib
-from typing import Sequence, Union
-from types import MethodType
-import tempfile
-import os
+
 
 logger = logging.getLogger()
 
